@@ -18,8 +18,8 @@ export default function Navbar(){
                 <Link href="#workex">
                     WorkEx
                 </Link>
-                <Link href="/contact">
-                    Contact
+                <Link href="#blogs">
+                    Blogs
                 </Link>
             </div>
         </div>

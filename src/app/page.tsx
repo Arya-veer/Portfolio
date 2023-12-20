@@ -48,8 +48,8 @@ function Profile() {
 
 function Landing(){
   return (
-    <div className="md:min-h-screen bg-gradient-to-b from-zinc-950 to-indigo-950 w-full px-5 snap-start pb-4" >
-      <h1 className="text-8xl mx-auto text-center font-bold">
+    <div className="md:min-h-screen sticky bg-gradient-to-b from-zinc-950 to-indigo-950 w-full px-5 snap-start" >
+      <h1 className="md:text-8xl text-6xl mx-auto text-center font-bold">
         Hello World! 😂😅
       </h1>
       <Profile />
@@ -150,8 +150,8 @@ function Skills(){
 
   return (
     // These are all the technical About I have acquired over the years.
-    <div className="md:min-h-screen bg-gradient-to-b from-indigo-950 to-amber-950 w-full p-6 snap-center" id="skills">
-      <h1 className="text-8xl font-sans text-center font-bold">
+    <div className="md:min-h-screen sticky bg-gradient-to-b from-indigo-950 to-amber-950 w-full p-2 snap-center" id="skills">
+      <h1 className="md:text-8xl text-6xl font-sans text-center font-bold">
         Skills 🤖⌨️
       </h1>
       <p className="mt-4 text-lg font-serif">
@@ -275,8 +275,8 @@ function Projects(){
   ]
 
   return(
-    <div className="md:min-h-screen bg-gradient-to-b from-amber-950 to-fuchsia-950 w-full p-6 snap-end" id="projects">
-      <h1 className="text-8xl font-sans text-center font-bold">
+    <div className="md:min-h-screen sticky bg-gradient-to-b from-amber-950 to-fuchsia-950 w-full p-2" id="projects">
+      <h1 className="md:text-8xl text-6xl font-sans text-center font-bold">
         Projects💻📱💪
       </h1>
       <p className="mt-4 text-lg font-serif">
@@ -297,10 +297,10 @@ function Projects(){
       <p className="text-slate-300 mt-2 text-lg">
         There are numerous other projects I have done. These are: 
       </p>
-      <div className="flex flex-col  justify-between mt-2">
+      <div className="flex flex-col justify-between mt-2">
         {
           otherProjects.map((project, index) => (
-            <div key={index} className="flex flex-row">
+            <div key={index} className="flex md:flex-row flex-col">
               <div className="text-lg text-amber-300">
                 {index+1}. {project.name} - 
               </div>
@@ -333,23 +333,23 @@ class WorkExClass {
 
 function WorkExCard({workex}: {workex: WorkExClass}){
   return (
-    <div className = "w-full border rounded-xl flex md:flex-row flex-col shadow-lg items-center">
+    <div className = "w-full border rounded-xl flex md:flex-row flex-col shadow-lg bg-white">
       <Image
         src={workex.image}
         alt={workex.company}
         width={340}
         height={340}
-        className="bg-white border-r-2 md:rounded-l-xl border-white"
+        className="bg-white border-r-2 md:rounded-l-xl border-fuchsia-950 text-fuchsia-950"
       />
-      <div className="flex flex-col w-full items-center">
-        <div className="text-4xl font-bold text-white border-b-2 border-white w-full text-center">
+      <div className="flex flex-col w-full justify-between h-full">
+        <div className="text-4xl font-bold text-white border-b-2 border-fuchsia-950 w-full text-center text-fuchsia-950">
           {workex.company}
         </div>
-        <div className="flex md:flex-row flex-col items-center justify-between w-full md:border-b-2 border-white">
-          <div className="text-2xl text-white">
+        <div className="flex md:flex-row flex-col items-center justify-between w-full md:border-b-2 border-fuchsia-950 text-fuchsia-950">
+          <div className="text-2xl text-fuchsia-950">
             {workex.position}
           </div>
-          <div className="text-2xl text-white">
+          <div className="text-2xl text-fuchsia-950">
             {workex.duration}
           </div>
         </div>
@@ -387,11 +387,11 @@ function WorkEx(){
     
   ]
   return (
-    <div className="md:min-h-screen bg-gradient-to-b from-fuchsia-950 to-indigo-950 w-full p-6 snap-end" id="workex">
-      <h1 className="text-8xl font-sans text-center font-bold">
+    <div className="md:min-h-screen sticky bg-gradient-to-b from-fuchsia-950 to-indigo-950 w-full p-2" id="workex">
+      <h1 className="md:text-8xl text-6xl font-sans text-center font-bold">
         Work Experience👨‍💼⚒️
       </h1>
-      <div className="mt-8 flex flex-col gap-8">
+      <div className="mt-8 flex flex-col gap-4">
         {
           internships.map((workex, index) => (
               <WorkExCard key={index} workex={workex}/>
@@ -402,6 +402,70 @@ function WorkEx(){
   )
 }
 
+class Blog {
+  title:string
+  description:string
+  link:string
+
+  constructor(title:string, description:string, link:string){
+    this.title = title
+    this.description = description
+    this.link = link
+  }
+}
+
+function BlogCard({blog}: {blog: Blog}){
+  return (
+    <Link className="border border-amber-300  rounded-t-lg flex flex-col justify-between pb-2" href={blog.link}>
+      <h1 className = "text-lg font-bold bg-amber-300 rounded-t-lg text-center text-indigo-800">
+        {blog.title}
+      </h1>
+      <p className="text-md">
+        {blog.description}
+      </p>
+    </Link>
+  )
+}
+
+
+function Blogs(){
+
+  const blogs = [
+    {
+      "title":"Integrating Django models with Nextjs revalidation",
+      "description":"NextJS has this cool caching feature that creates static pages by calling API thus reducing the load on server. But what if you want to use Django models with Nextjs revalidation?",
+      "link":""
+    },
+    {
+      "title":"How should you start preparation for the upcoming SI season?",
+      "description":"This is the question that every student has in their mind. This blog is a guide for students to prepare for the upcoming SI season.",
+      "link":""
+    },
+    {
+      "title":"Five things you must know as a fresher",
+      "description":"This blog is for you if you are a fresher and want to know what you should do in your first year of college.",
+      "link":""
+    }
+  ]
+
+
+  return (
+    <div className="md:min-h-screen sticky bg-gradient-to-b from-indigo-950 to-zinc-950 w-full p-2 snap-end" id="blogs">
+      <h1 className="md:text-8xl text-6xl font-sans text-center font-bold">
+        Blogs📝📝
+      </h1>
+      <div className="grid grid-cols-2 justify-between gap-6 mt-10 h-full">
+        {
+          blogs.map((blog, index) => (
+              <BlogCard key={index} blog={blog}/>
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+
+
 export default function Home() {
   return (
     <>
@@ -410,6 +474,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <WorkEx />
+        <Blogs />
       </div>
     </>
   );
