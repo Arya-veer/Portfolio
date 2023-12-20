@@ -315,12 +315,28 @@ function Projects(){
   )
 }
 
-function WorkExCard({workex}){
+class WorkExClass {
+  company: string;
+  position: string;
+  duration: string;
+  image: string;
+  description: string;
+
+  constructor(company: string, position: string, duration: string, image: string, description: string) {
+    this.company = company;
+    this.position = position;
+    this.duration = duration;
+    this.image = image;
+    this.description = description;
+  }
+}
+
+function WorkExCard({workex}: {workex: WorkExClass}){
   return (
     <div className = "w-full border rounded-xl flex md:flex-row flex-col shadow-lg items-center">
       <Image
         src={workex.image}
-        alt={workex.name}
+        alt={workex.company}
         width={340}
         height={340}
         className="bg-white border-r-2 md:rounded-l-xl border-white"
