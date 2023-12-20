@@ -315,13 +315,73 @@ function Projects(){
   )
 }
 
+function WorkExCard({workex}){
+  return (
+    <div className = "w-full border rounded-xl flex md:flex-row flex-col shadow-lg items-center">
+      <Image
+        src={workex.image}
+        alt={workex.name}
+        width={340}
+        height={340}
+        className="bg-white border-r-2 md:rounded-l-xl border-white"
+      />
+      <div className="flex flex-col w-full items-center">
+        <div className="text-4xl font-bold text-white border-b-2 border-white w-full text-center">
+          {workex.company}
+        </div>
+        <div className="flex md:flex-row flex-col items-center justify-between w-full md:border-b-2 border-white">
+          <div className="text-2xl text-white">
+            {workex.position}
+          </div>
+          <div className="text-2xl text-white">
+            {workex.duration}
+          </div>
+        </div>
+        <div>
+          {workex.description}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function WorkEx(){
+  const internships = [
+    {
+      "company":"Standard Chartered GBS",
+      "position":"Software Engineer Intern",
+      "duration":"May 2023 - July 2023",
+      "image":"/stanc.png",
+      "description":""
+    },
+    {
+      "company":"Asanify",
+      "position":"Quality Analyst Intern",
+      "duration":"May 2022 - July 2022",
+      "image":"/asanify.png",
+      "description":""
+    },
+    {
+      "company":"Library BITS Pilani",
+      "position":"Full Stack Developer",
+      "duration":"August 2022 - April 2023",
+      "image":"/libwork.jpg",
+      "description":""
+    },
+    
+  ]
   return (
     <div className="md:min-h-screen bg-gradient-to-b from-fuchsia-950 to-indigo-950 w-full p-6 snap-end" id="workex">
       <h1 className="text-8xl font-sans text-center font-bold">
-        Work Experience
+        Work Experience👨‍💼⚒️
       </h1>
-      
+      <div className="mt-8 flex flex-col gap-8">
+        {
+          internships.map((workex, index) => (
+              <WorkExCard key={index} workex={workex}/>
+          ))
+        }
+      </div>
     </div>
   )
 }
