@@ -24,6 +24,15 @@ const config: Config = {
         }
       }
     },
+    colors: {
+      "one": "#1F1C1C",
+      "two": "#242122",
+      "three": "#FF6445",
+      "gr1a": "#F73232",
+      "gr1b": "#FF7D16",
+      "gr3":"#FF6445",
+      "gr4":"FFA400"
+    }
   },
   plugins: [],
 }

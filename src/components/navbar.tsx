@@ -1,26 +1,33 @@
 
 import Link from "next/link"
 
-export default function Navbar(){
+interface NavbarProps {
+    page: string,
+    setPage: (page: string) => void
+}
+
+export default function Navbar({page,setPage}: NavbarProps){
+
+
+
     return (
 
-        <div className="md:h-[90px] h-[130px] z-10 lg:px-[50px] border-b-2 border-gray-150 w-full flex flex-row bg-zinc-950 justify-between">
-            <Link href="/" className="lg:text-6xl md:text-5xl text-2xl text-amber-400 font-bold my-auto">
-                Arya Veer Singh Chauhan
-            </Link>
-            <div className="flex flex-row text-amber-400 text-xl font-bold my-auto gap-6 justify-between">
-                <Link href="#skills">
-                    Skils
-                </Link>
-                <Link href="#projects">
-                    Projects
-                </Link>
-                <Link href="#workex">
-                    WorkEx
-                </Link>
-                <Link href="#blogs">
-                    Blogs
-                </Link>
+        <div className="md:h-[70px] h-[130px] w-full  pb-[1px] bg-gradient-to-r from-gr3 to-gr1b">
+            <div className="h-full w-full  bg-[#000000]">
+                <div  className="flex flex-row gap-24 p-3 h-full self-end font-sans justify-end">
+                    <div className={`my-auto py-[1px] px-[6px] rounded-full  ${page == "about" ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000]  font-bold":"text-three"} hover:cursor-pointer`} onClick={()=>{setPage("about")}}>
+                        About
+                    </div>
+                    <div className={`my-auto py-[1px] px-[6px] rounded-full  ${page == "projects" ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000]  font-bold":"text-three"} hover:cursor-pointer`} onClick={()=>{setPage("projects")}}>
+                        Projects
+                    </div>
+                    <div className={`my-auto py-[1px] px-[6px] rounded-full  ${page == "workex" ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000] font-bold":"text-three "} hover:cursor-pointer`} onClick={()=>{setPage("workex")}}>
+                        Work Experience
+                    </div>
+                    <div className={`my-auto py-[1px] px-[6px] rounded-full  ${page == "blogs" ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000] font-bold":"text-three"} hover:cursor-pointer`} onClick={()=>{setPage("blogs")}}>
+                        Blogs
+                    </div>
+                </div>
             </div>
         </div>
     )
