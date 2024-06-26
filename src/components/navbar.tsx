@@ -7,11 +7,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({page,setPage}: NavbarProps){
-
-
-
     return (
-
         <div className="md:h-[70px] h-[130px] w-full  pb-[1px] bg-gradient-to-r from-gr3 to-gr1b">
             <div className="h-full w-full  bg-[#000000]">
                 <div  className="flex flex-row gap-24 p-3 h-full self-end font-sans justify-end">

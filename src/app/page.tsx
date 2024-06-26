@@ -2,11 +2,81 @@
 
 import Navbar from '@/components/navbar'
 import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+const projects = [
+    {
+        "title": "Studydeck",
+        "startDate": "July 2023",
+        "endDate": "October 2023",
+        "techStack": ["Django Rest","Python","Postgresql","Next.js","S3","Linux","Nginx"],
+        "description": [
+            "Created the backend using Django for a platform-independent software used by more than 80% BITS students for the academics.",
+            "Devised a BFS and multithreading based algorithm to parse google drive and store 800 GB of study resources in S3 bucket.",
+            "Consolidated a CDN on campus LAN to decrease approx. 70% cost and also provided a resource-sharing feature to students.",
+            "Automated timetable download and parsing to prepopulate database, and allowing students to customize their own timetables.",
+            "Empowered the feature with autocomplete having a backtracking-based algorithm in C++ to increase code efficiency 20 times",
+        ],
+        "link": "https://studydeck.bits-sutechteam.org/"
+    }
+]
+
+
+interface ProjectCardProps {
+    title: string,
+    startDate: string,
+    endDate: string,
+    techStack: string[],
+    description: string[],
+    
+    link: string
+}
+
+function ProjectCard({title,startDate,endDate,techStack,description,link}:ProjectCardProps){
+    return (
+        <div className="bg-two px-6 py-2 flex flex-col gap-4">
+            <div className='flex flex-row justify-between'>
+                <div className='flex flex-col font-sans gap-3'>
+                    <h2 className="text-3xl font-bold  text-three underline flex flex-row gap-4">
+                        {title} <FaExternalLinkAlt className='text-sm self-center'/>
+                    </h2>
+                    <p className='text-sm'>
+                        <span className='font-bold underline'> Technologies:</span>  {techStack.join(', ')}
+                    </p>
+                </div>
+                <p className='text-sm'>
+                    {startDate} - {endDate}
+                </p>
+            </div>
+            <div>
+                <ul className='marker:text-three list-disc text-sm flex flex-col gap-2'>
+                    {
+                        description.map((point,index) => {
+                            return <li key={index}>{point}</li>
+                        })
+                    }
+                </ul>
+            </div>
+            
+        </div>
+    )
+}
 
 function Projects(){
     return (
-        <div>
-            Hello
+        <div className="py-10 pr-3 pl-7 flex flex-col h-full gap-10">
+            <div className="transparent pl-8 flex flex-col gap-2">
+                <p className="text-4xl font-semibold font-mono text-three">PROJECTS</p>
+            </div>
+            <div className="flex flex-col gap-10">
+                {
+                    projects.map((project,index) => {
+                        return <ProjectCard key={index} {...project} />
+                    })
+                }
+            </div>
         </div>
     )
 }
