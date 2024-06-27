@@ -16,10 +16,10 @@ const WORKEXES = [
         ],
         "organisation": "Library BITS Pilani",
         "type":"Part-time",
-        "links":{
-            "Library Website":"https://library.bits-pilani.ac.in/",
-            "BHG Gallery":"https://library.bits-pilani.ac.in/bhg",
-        }
+        "links":[
+            ["Library Website","https://library.bits-pilani.ac.in/"],
+            ["BHG Gallery","https://library.bits-pilani.ac.in/bhg"],
+        ],
     },
     {
         "title": "Software Developer",
@@ -33,7 +33,8 @@ const WORKEXES = [
         ],
         "organisation": "Standard Chartered GBS",
         "type":"Internship",
-        "links":{}
+        "links": []
+
     },
 ]
 
@@ -45,9 +46,7 @@ export interface WorkExCardProps {
     techStack: string[],
     description: string[],
     type: string,
-    links: {
-        [key: string]: string;
-    }
+    links: string[][]
 }
 
 function WorkExCard({title,startDate,endDate,organisation,techStack,description,type,links}:WorkExCardProps){
@@ -67,8 +66,8 @@ function WorkExCard({title,startDate,endDate,organisation,techStack,description,
                         {startDate} - {endDate}
                     </p>
                     <div className='flex flex-col p-2 gap-2 h-full justify-between'>{   
-                            Object.keys(links).map((key,index) => {
-                                return <Link key={index} href={links[key]} target="_blank" className='flex flex-row gap-2'><FaExternalLinkAlt />{key}</Link>
+                            links.map((arr,index) => {
+                                return <Link key={index} href={arr[1]} target="_blank" className='flex flex-row gap-2'><FaExternalLinkAlt />{arr[0]}</Link>
                                 
                             })
                         }
