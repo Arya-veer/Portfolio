@@ -2,25 +2,37 @@
 
 import Navbar from '@/components/navbar'
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { notFound } from 'next/navigation';
 
 const projects = [
     {
         "title": "Studydeck",
         "startDate": "July 2023",
         "endDate": "October 2023",
-        "techStack": ["Django Rest","Python","Postgresql","Next.js","S3","Linux","Nginx"],
+        "techStack": ["Django Rest","Python","Postgresql","Next.js","REST API","S3","Linux","Nginx"],
         "description": [
-            "Created the backend using Django for a platform-independent software used by more than 80% BITS students for the academics.",
-            "Devised a BFS and multithreading based algorithm to parse google drive and store 800 GB of study resources in S3 bucket.",
-            "Consolidated a CDN on campus LAN to decrease approx. 70% cost and also provided a resource-sharing feature to students.",
-            "Automated timetable download and parsing to prepopulate database, and allowing students to customize their own timetables.",
-            "Empowered the feature with autocomplete having a backtracking-based algorithm in C++ to increase code efficiency 20 times",
+            "Studydeck is a one stop solution for all academic needs of BITS Pilani students. In BITS Pilani, students have to create their own timetable which is a cumbersome process. Also, after new google drive policy, the unlimited cloud storage for BITS Pilani students was reduced to 15 GB. More than 700 GB of study material was present on the google drive for students.",
+            "After identifying all these problems, we came up with Studydeck. Firstly we devised an automated script which can download and populate our schema with timetable. Then we created REST APIs for students to use for creating and managing timetables. We also created a frontend application sourcing the REST APIs. We also allowed them to share their timetables with peers.",
+            "For the study resources problem, we parsed all google drives using a BFS-based script, using multithreading to increase efficiency. We stored all the study resources in S3 bucket and also on LAN creating a CDN. We then created REST APIs and a Frontend application for students to access these resources. We also allowed them to upload the resources.",
+            "We developed a backtracking-based algorithm for timetable autofill feature so that students can speed-up their timetable creation process. This we've done in C++ connected with python code using cython",
         ],
         "link": "https://studydeck.bits-sutechteam.org/"
-    }
+    },
+    {
+        "title": "Project Onetap",
+        "startDate": "July 2021",
+        "endDate": "February 2022",
+        "techStack": ["Django Rest","Python","MySQL","React.js","REST API", "Tkinter", "Multithreading","Asyncio","Symmetric encryption","Linux","Nginx"],
+        "description": [
+            "Project one tap is a multi-software system that aims to digitalize and organize the expenses of BITS Pilani students. The system has multiple features: Food Ordering and Delivery, Cab booking and pooling, Event and Merch signings etc.",
+            "Food Ordering System: This system allows students to order food from various food outlets in the campus. Students have a mobile application - SU App, and outlets are installed with a tkinter-based desktop application. Students have a unique QR code which is scanned in the desktop application. Both are connected to a backend server providing REST APIS. A delivery app is also available for outlets to deliver food to students.",
+            "Cab Booking and Pooling System: This system allows students to book cabs, pool cabs and also allows authorities to track them. Students use  SU App to book a cab and a vendor having Vendor app can see and take suitable actions. Also authorities have a web app to track all the cabs and to resolve any issues. All are connected to a backend server providing REST APIS to communicate among each other.",
+            "Event and Merch Signing System: This system allows students to sign up for events and buy merchandise. Students use SU App to sign up for events and buy merchandise. The various socities and departments use a web app to add events and merchandise. Later they use a different application to track the entry of students for billing purposes.",
+        ],
+        "link": "https://su-bitspilani.org/"
+    },
 ]
 
 
@@ -30,23 +42,22 @@ interface ProjectCardProps {
     endDate: string,
     techStack: string[],
     description: string[],
-    
     link: string
 }
 
 function ProjectCard({title,startDate,endDate,techStack,description,link}:ProjectCardProps){
     return (
-        <div className="bg-two px-6 py-2 flex flex-col gap-4">
+        <div className="bg-two px-6 py-2 flex flex-col gap-4 text-sm shadow shadow-gray">
             <div className='flex flex-row justify-between'>
                 <div className='flex flex-col font-sans gap-3'>
                     <h2 className="text-3xl font-bold  text-three underline flex flex-row gap-4">
-                        {title} <FaExternalLinkAlt className='text-sm self-center'/>
+                        {title} <Link href={link} target="_blank" className='text-sm self-center hover:cursor-pointer hover:text-lg py-2'><FaExternalLinkAlt /></Link>
                     </h2>
                     <p className='text-sm'>
                         <span className='font-bold underline'> Technologies:</span>  {techStack.join(', ')}
                     </p>
                 </div>
-                <p className='text-sm'>
+                <p className='text-lg pt-2 font-sans'>
                     {startDate} - {endDate}
                 </p>
             </div>
@@ -170,7 +181,13 @@ export default function Page(){
                     ?
                     <Blogs />
                     :
-                    null
+                    page === 'contact'
+                    ?
+                    <div>
+                        Contact
+                    </div>
+                    :
+                    notFound()
             }
             </div>
         </div>

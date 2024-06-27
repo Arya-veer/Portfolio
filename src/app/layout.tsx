@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex px-10 h-full w-full '>
-          <Image src="/about/aboutbg.png" width={900} height={900} alt="background" className='absolute -z-50 top-0 right-0 mt-[130px] md:mt-[90px]'/>
-          <div className='w-1/5 h-full'>
+        <div className='flex lg:flex-row flex-col px-10 h-full w-full '>
+          <Image src="/about/aboutbg.png" quality={100} fill alt="background" className='absolute -z-50 top-0 right-0 mt-[130px] md:mt-[70px] md:bg-contain bg-cover'/>
+          <div className='lg:w-1/5 w-full h-full lg:block hidden'>
             <Sidebar />
           </div>
-          <div className='w-4/5 h-full'>
+          <div className='lg:w-4/5 w-full h-full'>
               {children}
           </div>
         </div>
