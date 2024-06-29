@@ -34,7 +34,7 @@ function PersonalDetails(){
             <p className='text-center font-sans w-full font-bold md:text-lg text-md'>
                     Arya veer singh chauhan
             </p>
-            <div className='flx flex-col md:gap-4 gap-0 md:pt-6 pt-2 md:pb-2 pb-0 break-all'>
+            <div className='flex flex-col md:gap-2 md:pt-6 pt-2 md:pb-2 pb-0 break-all gap-0'>
                 <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="mailto:aryaveersingh2003@gmail.com">
                     <MdOutlineMailOutline className='text-three md:text-xl text-sm'/>
                     <p className='text-white md:text-sm text-[10px] font-sans my-auto'>aryaveersingh2003@gmail.com</p>
