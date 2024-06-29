@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from '@/components/sidebar'
 import Image from 'next/image'
+import Navbar from '@/components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Sidebar />
           </div>
           <div className='lg:w-3/4 w-full h-full'>
+              <Navbar />
               {children}
           </div>
         </div>
