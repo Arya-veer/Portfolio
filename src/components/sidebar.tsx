@@ -8,19 +8,19 @@ import { FaLinkedinIn,FaGithub, } from "react-icons/fa";
 
 function College(){
     return(
-        <div className='border-t-2 border-three mt-4 flex flex-col gap-3 pb-4 pt-8 break-all'>
-            <p className='font-semibold text-[15px]'>
+        <div className='border-t-2 border-three mt-4 flex flex-col md:gap-3 gap-1 md:pb-4 pb-1 md:pt-8 pt-1'>
+            <p className='font-semibold md:text-[15px] text-[10px]'>
                 Birla Institute of Technology and Science, Pilani
             </p>
             <div className='flex flex-row justify-between'>
-                <p className='text-[13px]'>
+                <p className='md:text-[13px] text-[8px]'>
                     B.E. Computer Science
                 </p>
-                <p className='text-[13px]'>
+                <p className='md:text-[13px] text-[8px]'>
                     2020-2024
                 </p>
             </div>
-            <p className='text-[13px]'>
+            <p className='md:text-[13px] text-[8px]'>
                 CGPA: 8.64
             </p>
         </div>
@@ -30,29 +30,31 @@ function College(){
 
 function PersonalDetails(){
     return (
-        <>
-            <p className='text-center font-sans font-bold text-lg'>
+        <div className='flex flex-col w-full'>
+            <p className='text-center font-sans w-full font-bold md:text-lg text-md'>
                     Arya veer singh chauhan
             </p>
-            <div className='flex flex-col gap-4 pt-6 pb-2 break-all'>
+            <div className='flx flex-col md:gap-4 gap-0 md:pt-6 pt-2 md:pb-2 pb-0 break-all'>
                 <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="mailto:aryaveersingh2003@gmail.com">
-                    <MdOutlineMailOutline className='text-three text-xl'/>
-                    <p className='text-white text-sm font-sans my-auto'>aryaveersingh2003@gmail.com</p>
+                    <MdOutlineMailOutline className='text-three md:text-xl text-sm'/>
+                    <p className='text-white md:text-sm text-[10px] font-sans my-auto'>aryaveersingh2003@gmail.com</p>
                 </Link>
                 <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="tel:+91 8619151680">
-                    <MdOutlinePhone className='text-three'/>
-                    <p className='text-white text-sm font-sans my-auto'>+91 8619151680</p>
+                    <MdOutlinePhone className='text-three md:text-xl text-sm'/>
+                    <p className='text-white md:text-sm text-[10px] font-sans my-auto'>+91 8619151680</p>
                 </Link>
-                <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="https://github.com/Arya-veer">
-                    <FaGithub className='text-three'/>
-                    <p className='text-white text-sm font-sans my-auto'>Github</p>
-                </Link>
-                <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="https://www.linkedin.com/in/arya-veer-singh-chauhan-428154210/">
-                    <FaLinkedinIn className='text-three'/>
-                    <p className='text-white text-sm font-sans my-auto'>Linkedin</p>
-                </Link>
+                <div className='flex flex-row w-full justify-between'>
+                    <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="https://github.com/Arya-veer">
+                        <FaGithub className='text-three md:text-xl text-sm'/>
+                        <p className='text-white md:text-sm text-[10px] font-sans my-auto'>Github</p>
+                    </Link>
+                    <Link className='flex flex-row gap-2 text-xl h-fit items-center' href="https://www.linkedin.com/in/arya-veer-singh-chauhan-428154210/">
+                        <FaLinkedinIn className='text-three md:text-xl text-sm'/>
+                        <p className='text-white md:text-sm text-[10px] font-sans my-auto'>Linkedin</p>
+                    </Link>
+                </div>
             </div>
-        </>
+        </div>
     )
 }
 
@@ -60,14 +62,26 @@ function PersonalDetails(){
 function Profile(){
     return (
         <div className="rounded-2xl border-0 bg-gradient-to-r from-gr1a to-gr1b p-[1px] w-full h-full">
-            <div className='rounded-2xl bg-two px-5 py-2  border-three w-full'>
-                <div className='w-full my-5 pb-6 border-b-[1.5px] border-three'>
-                    <Image src='/profile/propic.jpg' width={200} height={200} className='rounded-full object-contain mx-auto' alt='profile picture' />
+            <div className='rounded-2xl bg-two px-5 py-2  w-full flex flex-col'>
+                <div className='flex md:flex-col flex-row'>
+                    <div className='md:w-full md:my-5 md:h-fit h-full my-auto md:pb-6 md:border-b-[1.5px]   border-three w-1/3'>
+                        <Image src='/profile/propic.jpg' width={200} height={200} className='md:rounded-full my-auto h-fit object-contain mx-auto' alt='profile picture' />
+                    </div>
+                    <div className='flex flex-col md:pl-0 pl-3 w-full'>
+                        <PersonalDetails/>
+                        <div className='md:block hidden'>
+                            <College/>
+                        </div>
+                    </div>
                 </div>
-                <PersonalDetails/>
+                <div className='md:hidden block'>
+                    <College/>
+                </div>
 
-                <College/>
+                
+                
             </div>
+            
         </div>
     )
 }
@@ -75,7 +89,7 @@ function Profile(){
 
 export default function Sidebar(){
     return (
-        <div className='pt-8 flex flex-col h-full justify-evenly'>
+        <div className='pt-8 h-full md:w-full justify-evenly'>
             <Profile/>
         </div>
     )

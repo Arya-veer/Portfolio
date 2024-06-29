@@ -21,8 +21,8 @@ const LINKS = [
         link: "/blogs"
     },
     {
-        name: "Contact",
-        link: "/contact"
+        name: "Resume",
+        link: "/resume"
     }
 
 ]
@@ -46,9 +46,9 @@ function NavLink({name,link}:NavLinkProps){
 export default function Navbar(){
 
     return (
-        <div className="lg:h-[70px] h-[130px] w-full  pb-[1px] bg-gradient-to-r from-gr3 to-gr1b">
-            <div className="h-full w-full  bg-[#000000]">
-                <div  className="flex lg:flex-row flex-col lg:gap-24 gap-2 p-3 h-full self-end font-sans justify-end">
+        <div className="md:h-[70px] h-fit w-full mt-6 md:mt-0 pb-[1px] bg-gradient-to-r from-gr3 to-gr1b">
+            <div className="h-full w-full bg-[#000000]">
+                <div  className="flex md:flex-row flex-col xl:gap-24 lg:gap-14 md:gap-10 gap-2 p-3 h-full self-end font-sans bg-[#000000] justify-end">
                     {
                         LINKS.map((link,index) => {
                             return <NavLink key={index} {...link} />

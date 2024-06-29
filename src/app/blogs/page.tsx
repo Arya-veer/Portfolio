@@ -1,6 +1,15 @@
+import {BLOGS} from './data'
+import {BlogCard} from './card'
+
 
 export default function Blogs(){
     return (
-        <h1>  Blogs </h1>
+        <div className="grid md:grid-cols-2 grid-cols-1 p-2">
+            {
+                BLOGS.map((blog,index) => {
+                    return <BlogCard key={index} {...blog} />
+                })
+            }
+        </div>
     )
 }

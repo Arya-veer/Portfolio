@@ -1,13 +1,13 @@
 
 export default function About(){
     return (
-        <div className="py-10 pr-3 pl-7 flex flex-col h-full gap-10">
+        <div className="md:py-10 pt-2 md:pr-3 px-1 md:pl-7 flex flex-col h-full gap-10">
             <div className="transparent pl-8 flex flex-col gap-2">
-                <p className="font-sans font-semibold text-lg">Hello World! My name is</p>
-                <p className="text-4xl font-bold font-sans">Arya Veer Singh Chauhan</p>
-                <p className="text-three font-semibold text-2xl">I am a full stack developer</p>
+                <p className="font-sans font-semibold md:text-lg text-md">Hello World! My name is</p>
+                <p className="md:text-4xl text-2xl font-bold font-sans">Arya Veer Singh Chauhan</p>
+                <p className="text-three font-semibold md:text-2xl text-xl">I am a full stack developer</p>
             </div>
-            <div className="bg-two p-6  flex flex-col font-sans gap-3 ">
+            <div className="bg-two md:p-6 p-2 flex flex-col font-sans gap-3 ">
                 <div>
                     <h2 className="text-lg font-bold  text-three underline">
                         About me
