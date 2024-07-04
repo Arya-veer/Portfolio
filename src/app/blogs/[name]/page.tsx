@@ -1,6 +1,8 @@
 
 import { BLOGS } from '../data';
-
+import {Comment} from '../components/comment';
+import { collection, addDoc,updateDoc } from "firebase/firestore"; 
+import { db } from "@/services/firebase-config";
 
 interface BlogProps {
     params: {
@@ -8,7 +10,7 @@ interface BlogProps {
     };
 }
 
-interface Blog {
+export interface Blog {
     title: string;
     link: string;
     category: string;
@@ -17,7 +19,7 @@ interface Blog {
     active: boolean;
     component: any;
     name: string;
-
+    blogID: number;
 }
 
 export default function Blog({params}: BlogProps){
@@ -30,6 +32,7 @@ export default function Blog({params}: BlogProps){
             {
                 blog ? (blog.component ? <blog.component blog={blog}/> : <p>Blog not found</p>) : <p>Blog not found</p> 
             }
+            <Comment blog={blog}/>
         </div>
     )
 }
