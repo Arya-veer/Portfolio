@@ -2,6 +2,7 @@ import { Blog } from "../[name]/page";
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "@/services/firebase-config";
 import { redirect } from "next/navigation";
+// import { redirect } from "next/dist/server/api-utils";
 
 export function Comment({blog}:{blog:Blog}){
 
@@ -13,11 +14,12 @@ export function Comment({blog}:{blog:Blog}){
                 date: new Date().toISOString(),
                 blog:blog.blogID
             });
-            console.log("Document written with ID: ", docRef.id);
-            redirect("/blogs")
+            
         } catch (e){
             console.error("Error adding document: ", e);
         }
+        
+        redirect(`/blogs/`);
     }
 
     return (
