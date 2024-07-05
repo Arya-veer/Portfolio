@@ -28,7 +28,7 @@ export default function Blog({params}: BlogProps){
     
 
     return (
-        <div className='p-2 pt-6 h-full w-full '>
+        <div className='p-2 pt-6 h-full w-full text-white'>
             {
                 blog ? (blog.component ? <blog.component blog={blog}/> : <p>Blog not found</p>) : <p>Blog not found</p> 
             }
