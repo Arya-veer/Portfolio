@@ -1,5 +1,6 @@
 import  Introduction  from './blogs/introduction';
 import Resume from './blogs/resume-section';
+import DSA from './blogs/dsa-section';
 
 
 
@@ -26,4 +27,15 @@ export const BLOGS = [
         "name":"resume-section",
         "blogID":2
     },
+    {
+        "title": "Chapter 3: DSA Section",
+        "link": "/blogs/dsa-section",
+        "category": "SDE Interview tips",
+        "date": "25/07/2024",
+        "excerpt":"DSA is the most important part of any technical interview. In this blog, I will be discussing the importance of DSA, what kind of questions are asked in this section and how to prepare for the same.",
+        "active":true,
+        "component":DSA,
+        "name":"dsa-section",
+        "blogID":3
+    }
 ]
