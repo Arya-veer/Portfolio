@@ -13,7 +13,7 @@ export default function About(){
                         About me
                     </h2>
                     <p className="text-sm">
-                    I am a dedicated full stack developer with a passion for solving real-world problems. In July 2024, I will be joining Tata 1mg as a Software Developer, and I am eager to collaborate with the exceptional engineering team there to further enhance my skills and knowledge. My academic journey began with a strong foundation in Science and Mathematics during high school, where I achieved a JEE Advanced rank of 4741 and a BITSAT score of 391/450. My interest in coding sparked at an early age, starting with the creation of simple web pages and software.
+                    I am a dedicated full stack developer with a passion for solving real-world problems. I am currently working at Tata 1mg as a Software Developer, and I feel amazing to learn and collaborate int the exceptional engineering team here to further enhance my skills and knowledge. My academic journey began with a strong foundation in Science and Mathematics during high school, where I achieved a JEE Advanced rank of 4741 and a BITSAT score of 391/450. My interest in coding sparked at an early age, starting with the creation of simple web pages and software.
                     </p>
                 </div>
                 <div>
@@ -34,7 +34,7 @@ export default function About(){
                     </p>
                     <p className="text-sm">
                         <span className="font-semibold">Frameworks and Technologies </span>
-                        Django, Next.js, React.js, Springboot, MySQL, PostgreSQL, MongoDB, Git, Docker, Kubernetes, Kafka, RabbitMQ, Git, 
+                        Django, Next.js, React.js, Sanic, Springboot, MySQL, PostgreSQL, Ruby on Rails, MongoDB, Git, Docker, Kubernetes, Kafka, RabbitMQ, Git,
                     </p>
                     <p className="text-sm">
                         <span className="font-semibold">Methods and tools: </span>
