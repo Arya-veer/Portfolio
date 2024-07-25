@@ -18,11 +18,11 @@ export function BlogCard({title,link,category,date,excerpt,active}:BlogCardProps
                     <p className="md:text-lg text-md font-semibold font-mono text-[#ffba92] w-fit">Category: {category}</p>
                     {   active 
                             ? 
-                    <div className={`px-6 py-[1px] rounded-xl bg-gradient-to-r from-gr1b text-[#000000] to-gr3 hover:cursor-pointer`}>
-                        <Link href={link} className={`font-bold text-lg font-sans`}>
+                    <Link href={link} className={`px-6 py-[1px] rounded-xl bg-gradient-to-r from-gr1b text-[#000000] to-gr3 hover:cursor-pointer`}>
+                        <div className={`font-bold text-lg font-sans`}>
                             Read
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                         :
                     <p  className={`font-bold md:text-lg text-md font-sans`}>
                         Coming Soon

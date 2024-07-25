@@ -28,7 +28,7 @@ export const BLOGS = [
         "blogID":2
     },
     {
-        "title": "Chapter 3: DSA Section",
+        "title": "Chapter 3: Prepare and Ace DSA section in Interviews",
         "link": "/blogs/dsa-section",
         "category": "SDE Interview tips",
         "date": "25/07/2024",

@@ -11,7 +11,7 @@ export default function DSA({blog}:any){
             </h1>
             <div className="mt-3 p-2">
                 <p className="md:text-md text-md text-white font-serif">
-                    This blog discusses in depth about the DSA section of any technical interview. This section is what most of the students prepare for for the technical interviews and it is one of the very necessary sections to prepare for. In this blog, we will discuss about the importance of DSA, what kind of questions are asked in this section and how to prepare for the same. Let&apos;s get started!
+                    This blog discusses in depth about the DSA section of any technical interview. This section is what most of the students prepare for the most and rightly so because the technical interviews at an early stage are very much decided by DSA. It is one of the very necessary sections to prepare for. In this blog, we will discuss about the importance of DSA, what kind of questions are asked in this section and how to prepare for the same. Let&apos;s get started!
                 </p>
                 <div>
                     <h2 className="md:text-xxl text-lg text-three font-bold mt-4">
