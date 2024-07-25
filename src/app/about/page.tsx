@@ -34,11 +34,11 @@ export default function About(){
                     </p>
                     <p className="text-sm">
                         <span className="font-semibold">Frameworks and Technologies </span>
-                        Django, Next.js, React.js, Sanic, Springboot, MySQL, PostgreSQL, Ruby on Rails, MongoDB, Git, Docker, Kubernetes, Kafka, RabbitMQ, Git,
+                        Django, Next.js, React.js, Sanic, Springboot, MySQL, PostgreSQL, Ruby on Rails, MongoDB,Docker, Kubernetes, Kafka, RabbitMQ, Git, SQS, Redis, S3, Nginx, AWS
                     </p>
                     <p className="text-sm">
                         <span className="font-semibold">Methods and tools: </span>
-                        Design patterns, Agile, Scrum, CI/CD, Microservices, RESTful APIs, GraphQL, Websockets, Server-side rendering, Postman, Github, 
+                        Design patterns, Agile, Scrum, CI/CD, Microservices, RESTful APIs, GraphQL, Websockets, Server-side rendering, Postman, Github,JIRA, Bitbucket
                     </p>
                 </div>
             </div>

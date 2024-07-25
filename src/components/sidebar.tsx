@@ -58,6 +58,24 @@ function PersonalDetails(){
     )
 }
 
+function CurrentWork(){
+    return (
+        <div className='border-t-2 border-three mt-4 flex flex-col md:gap-0 w-full gap-1 md:pb-0 pb-1 md:pt-0 pt-1'>
+            <p className='font-semibold md:text-[30px] text-[10px] mx-auto'>
+                Tata 1MG
+            </p>
+            <div className='flex flex-row justify-between'>
+                <p className='md:text-[15px] text-[8px]'>
+                    SDE 1
+                </p>
+                <p className='md:text-[15px] text-[8px]'>
+                    July 2024 - Present
+                </p>
+            </div>
+        </div>
+    )
+}
+
 
 function Profile(){
     return (
@@ -70,9 +88,15 @@ function Profile(){
                     <div className='flex flex-col md:pl-0 pl-3 w-full'>
                         <PersonalDetails/>
                         <div className='md:block hidden'>
+                            <CurrentWork/>
+                        </div>
+                        <div className='md:block hidden'>
                             <College/>
                         </div>
                     </div>
+                </div>
+                <div className='md:hidden block'>
+                    <CurrentWork/>
                 </div>
                 <div className='md:hidden block'>
                     <College/>
