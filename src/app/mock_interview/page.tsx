@@ -15,10 +15,11 @@ export default function MockInterviewForm(){
                 date: new Date().toISOString(),
                 college: formData.get('college')
             });
-            console.log("Response added");
-            redirect(`/mock_interview/`);
         } catch (e){
             console.error("Error adding resume: ", e);
+        } finally {
+            console.log("Response added");
+            redirect(`/mock_interview/`);
         }
     }
 
