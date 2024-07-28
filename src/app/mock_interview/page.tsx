@@ -19,7 +19,7 @@ export default function MockInterviewForm(){
             console.error("Error adding resume: ", e);
         } finally {
             console.log("Response added");
-            redirect(`/mock_interview/`);
+            redirect(`/blogs`);
         }
     }
 
