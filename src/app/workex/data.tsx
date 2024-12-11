@@ -5,9 +5,8 @@ export const WORKEXES = [
         "endDate": "Present",
         "techStack": ["Python","Sanic","asyncio","Ruby on Rails","REST API","Kubernetes","Pytest","Mockito","Postman","Docker","AWS","Git","SQS","Redis","S3"],
         "description": [
-            "As my first job oppurtunity,I am currently under training program where I am learning new tech stack like Sanic and Ruby on rails.",
-            "Developed a test application for expense management system using Sanic and asyncio to understand the asynchronous programming in python.",
-            "Also developed a small application for the learning purposes using Ruby on Rails to understand the MVC architecture and the working of the framework.",
+            "Integrated doctor E-consultation with the B2B business allowing insurance companies to conduct a virtual consultation of clients with doctors.",
+            "Improved efficiency of a graph-based algorithm reducing API latency to genereate Medical Reports by 50%.",
         ],
         "organisation": "Tata 1MG",
         "type":"Full Time Role",

@@ -1,5 +1,17 @@
 export const PROJECTS = [
     {
+        "title": "Ruleit.ai",
+        "startDate": "December 2024",
+        "endDate": "Present",
+        "techStack": ["Django Rest","Python","Postgresql","React.js","REST API","Nginx","Linux"],
+        "description":[
+            "This is an interesting project idea I am currently working with, which decouples operational rules from the codebase. The idea is to create a platform where business rules can be defined and modified external to codebase, but still be able to interact with the codebase.",
+            "Rules, defined in natual languages are consumed by an NLP model which converts them into a structured format. This structured format is then used to create a rule engine which can be used to validate the rules.",
+            "A YAML file in codebase parses the defined models and allows NLP model to use same for conversion. Also a REST API is created to interact with the rule engine.",
+            "An interactive frontend is created to define and modify the rules. The frontend can be accesed by the business users to define the rules and also by the developers to see the rules, verify correctnes and interact with the rule engine."
+        ]
+    },
+    {
         "title": "Studydeck",
         "startDate": "July 2023",
         "endDate": "October 2023",
