@@ -21,7 +21,7 @@ export function ProjectCard({title,startDate,endDate,techStack,description,link}
                         {title} <Link href={link} target="_blank" className='text-sm self-center hover:cursor-pointer hover:text-lg py-2'><FaExternalLinkAlt /></Link>
                     </h2>
                     <p className='md:text-sm text-[12px]'>
-                        <span className='font-bold underline'> Technologies:</span>  {techStack.join(', ')}
+                        <span className='font-bold underline text-white'> Technologies:</span>  {techStack.join(', ')}
                     </p>
                 </div>
                 <p className='md:text-lg text-md pt-2 font-sans'>
