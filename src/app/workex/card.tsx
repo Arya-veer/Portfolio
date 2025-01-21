@@ -14,7 +14,7 @@ export interface WorkExCardProps {
 
 export function WorkExCard({title,startDate,endDate,organisation,techStack,description,type,links}:WorkExCardProps){
     return (
-        <div className="bg-two md:px-2 px-1 py-2 flex flex-col gap-4 text-sm shadow shadow-gray">
+        <div className="bg-two md:px-3 px-2 py-2 flex flex-col gap-4 text-sm shadow shadow-gray">
             <div className='flex md:flex-row flex-col justify-between border-b-[1px] border-three pb-1 w-full'>
                 <div className='flex flex-col font-sans gap-3 md:w-3/5 w-full'>
                     <h2 className="md:text-3xl text-2xl font-bold  text-three underline flex flex-row gap-4">
