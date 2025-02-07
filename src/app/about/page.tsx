@@ -18,22 +18,21 @@ export default function About() {
                         About me
                     </h2>
                     <p className='text-sm'>
-                        I am a software engineer with a passion for solving
-                        real-world problems. I am currently
-                        working at Tata 1mg as a Software
-                        Developer, and I feel amazing to
-                        learn and collaborate int the
-                        exceptional engineering team here to
-                        further enhance my skills and
-                        knowledge. My academic journey began
-                        with a strong foundation in Science
-                        and Mathematics during high school,
-                        where I achieved a JEE Advanced rank
-                        of 4741 and a BITSAT score of
-                        391/450. My interest in coding
-                        sparked at an early age, starting
-                        with the creation of simple web
-                        pages and software.
+                        I am a Software Engineer who loves
+                        to design and develop scalable and
+                        efficient software solutions. I am
+                        currently exploring the interesting
+                        domain of distributed systems. My
+                        learning methodology is learning by
+                        doing. I am a quick learner and
+                        always eager to learn new things. I
+                        am a self-motivated individual who
+                        is always looking for new challenges
+                        and opportunities to grow. I am a
+                        strong believer in the power of
+                        technology to solve real-world
+                        problems and make the world a better
+                        place.
                     </p>
                 </div>
                 <div>
@@ -85,10 +84,9 @@ export default function About() {
                             Frameworks and Technologies{" "}
                         </span>
                         Django, Next.js, React.js, Sanic,
-                        Springboot, MySQL, PostgreSQL, Ruby
-                        on Rails, MongoDB,Docker,
-                        Kubernetes, Kafka, RabbitMQ, Git,
-                        SQS, Redis, S3, Nginx, AWS
+                        Springboot, MySQL, PostgreSQL,
+                        MongoDB, Docker, Kubernetes, Kafka,
+                        Git, SQS, Redis, S3, Nginx, SQS
                     </p>
                     <p className='text-sm'>
                         <span className='font-semibold'>
