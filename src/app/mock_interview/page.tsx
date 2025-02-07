@@ -26,8 +26,7 @@ export default function MockInterviewForm(){
     return (
         <div className="p-10 flex flex-col gap-3">
             <p>
-                Currently the mock interviews are free. However, if you want to contribute then spread the word about this initiative. Also currently I will take mock interviews of college students only for software development roles. If you are a college student and want to take a mock interview then fill the form below. I will contact you over email for the interview.
-                Soon I will start with other roles and also for working professionals. Also we are working on a new platform for this initiative. Stay tuned for more updates.
+                Currently the mock interviews are free. However, if you want to contribute then spread the word about this initiative. I will take mock interviews of college students only for software development roles. If you are a college student and want to take a mock interview then fill the form below. I will contact you over email for the interview.
             </p>
             <form className="mx-auto w-3/4 border border-three flex flex-col gap-2 p-2" action={addResponse}>
                 <input type="text" name="name" className="w-full bg-one text-white p-2" placeholder="Name" />

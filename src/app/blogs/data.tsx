@@ -1,6 +1,8 @@
 import  Introduction  from './blogs/introduction';
 import Resume from './blogs/resume-section';
 import DSA from './blogs/dsa-section';
+import ConsistentHashing from './blogs/consistent-hashing';
+
 
 
 
@@ -37,5 +39,16 @@ export const BLOGS = [
         "component":DSA,
         "name":"dsa-section",
         "blogID":3
+    },
+    {
+        "title": "Consistent Hashing",
+        "link": "/blogs/consistent-hashing",
+        "category": "System Design",
+        "date": "07/02/2025",
+        "active":true,
+        "component":ConsistentHashing,
+        "name":"consistent-hashing",
+        "blogID":4,
+        "excerpt":"Consistent hashing is a special kind of hashing which is one of the pillars of distributed systems. In this blog, I will be discussing about the what, why and how of consistent hashing."
     }
 ]
