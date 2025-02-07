@@ -256,7 +256,7 @@ export default function ConsistentHashing({ blog }: any) {
                     <p className='md:text-md text-md text-white font-serif'>
                         You can find my implementation of
                         consistent hashing{" "}
-                        <a href='https://github.com/Arya-veer/SystemDesign/tree/master/consistent_hashing'>
+                        <a className="hover:underline text-three font-semibold" href='https://github.com/Arya-veer/SystemDesign/tree/master/consistent_hashing'>
                             here
                         </a>
                         .
@@ -267,7 +267,7 @@ export default function ConsistentHashing({ blog }: any) {
                     in the comments below. Also, if you have
                     any suggestions for future blogs, feel
                     free to comment them below. Next blog
-                    will be coming soon. Stay tuned!
+                    will be on URL shortner. Stay tuned!
                 </p>
             </div>
         </div>

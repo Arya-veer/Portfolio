@@ -23,6 +23,10 @@ const LINKS = [
     {
         name: "Resume",
         link: "/resume"
+    },
+    {
+        name: "Mock Interview",
+        link: "/mock_interview"
     }
 ]
 
