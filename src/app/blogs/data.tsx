@@ -2,6 +2,7 @@ import  Introduction  from './blogs/introduction';
 import Resume from './blogs/resume-section';
 import DSA from './blogs/dsa-section';
 import ConsistentHashing from './blogs/consistent-hashing';
+import FlexBisonTools from './blogs/flex-bison';
 
 
 
@@ -50,5 +51,16 @@ export const BLOGS = [
         "name":"consistent-hashing",
         "blogID":4,
         "excerpt":"Consistent hashing is a special kind of hashing which is one of the pillars of distributed systems. In this blog, I will be discussing about the what, why and how of consistent hashing."
+    },
+    {
+        "title": "Flex and Bison Tools",
+        "link": "/blogs/flex-bison",
+        "category": "Compiler Design",
+        "date": "08/02/2025",
+        "active": true,
+        "component": FlexBisonTools,
+        "name":"flex-bison",
+        "blogID":5,
+        "excerpt":"Flex and Bison are compiler construction tools that are used to generate the lexical analyzers and parsers. I tried to use these tools for a very basic compiler and here I am sharing the power of these tools."
     }
 ]

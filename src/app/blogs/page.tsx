@@ -6,7 +6,7 @@ export default function Blogs(){
     return (
         <div className="grid md:grid-cols-2 grid-cols-1 p-2">
             {
-                BLOGS.map((blog,index) => {
+                BLOGS.reverse().map((blog,index) => {
                     return <BlogCard key={index} {...blog} />
                 })
             }
