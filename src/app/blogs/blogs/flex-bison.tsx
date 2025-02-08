@@ -16,20 +16,20 @@ export default function FlexBisonTools({ blog }: any) {
             </h1>
             <div className='mt-3 p-2'>
                 <p className='md:text-md text-md text-white font-serif'>
-                    It was exactly 2 years ago when we were
+                    It was exactly two years ago when we were
                     struggling to implement a DFA for a
                     simple language with some 70 regular
-                    expressions. But after writing a few
+                    expressions. And after writing a few
                     hundred lines of code, we finally did
                     it. It was a simple switch case inside
-                    while loop, where state is maintained. I
-                    was recently going through source code
+                    a while loop, where the state is maintained. I
+                    was recently going through the source code
                     of postgres and was trying to learn how
                     lexers are actually implemented in real
-                    application. That is when I stumbled
+                    applications. That is when I stumbled
                     upon the FLEX tool. Diving a bit more
-                    deep and I came to know about Bison. In
-                    this blog, I will be discussing about
+                    deeply, I learned about Bison. In
+                    this blog, I will be discussing
                     these tools.
                 </p>
                 <div>
@@ -53,7 +53,7 @@ export default function FlexBisonTools({ blog }: any) {
                         create states for each regular
                         expression and then traverse through
                         these states based on the input
-                        program. Finally we tokenize of give
+                        program. Finally we tokenize or give
                         an error. For our ERPLAG compiler,
                         we too did the same implementation
                         which you can find{" "}
@@ -66,17 +66,17 @@ export default function FlexBisonTools({ blog }: any) {
                         .
                     </p>
                     <p className='md:text-md text-md text-white font-serif mt-2'>
-                        Now the problem to create a DFA from
+                        Now the problem of creating a DFA from
                         regular expressions and then
                         implementing is very tedious and
                         time consuming. This is where the
                         FLEX tool comes into play. FLEX
                         stands for Fast Lexical Analyzer
-                        Generator. It is a tool which takes
+                        Generator. It is a tool that takes
                         the regular expressions and then
                         generates the C code for the DFA.
                         Thus abstracting the whole process
-                        of creating DFA and implementing it.
+                        of creating a DFA and implementing it.
                         This is a very powerful tool and is
                         used in many compilers. Learn more
                         about FLEX using the official{" "}
@@ -110,7 +110,7 @@ export default function FlexBisonTools({ blog }: any) {
                         errors and create a parse tree.
                         Parsing needs some grammar rules
                         (Context Free Grammar to be
-                        precise), which is then used to
+                        precise), which are then used to
                         create a parse table. During the
                         parsing process, the tokens are
                         matched with the grammar rules using
@@ -134,7 +134,7 @@ export default function FlexBisonTools({ blog }: any) {
                         creation and parser implementation,
                         making it a popular choice for many
                         compilers. You can learn more about
-                        Bison tool{" "}
+                        the Bison tool{" "}
                         <a
                             className='text-three hover:underline'
                             href='https://web.mit.edu/gnu/doc/html/bison_1.html'
@@ -155,7 +155,7 @@ export default function FlexBisonTools({ blog }: any) {
                 </div>
 
                 <p className='md:text-lg text-lg text-white font-serif border-t-2 border-[#ffba92] mt-4 pt-4'>
-                    Thats all for this blog. I hope you are
+                    That&apos;s all for this blog. I hope you are
                     dying to try these tools yourself. Even
                     if you aren&apos;t, I was and thus I
                     tried to implement a very basic compiler
@@ -171,7 +171,7 @@ export default function FlexBisonTools({ blog }: any) {
                     tools a try. They will surely make your
                     life easier. For the people who have
                     compiler design in their curriculum, I
-                    suggest you to try these tools. They
+                    suggest you definitely try these tools. They
                     will surely help you in understanding
                     the concepts better.
                 </p>
