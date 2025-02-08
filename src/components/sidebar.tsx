@@ -117,7 +117,7 @@ function Leetcode() {
                     Contest Rating: 1822
                 </p>
                 <p className='md:text-[15px] text-[8px]'>
-                    Problems Solved: 504
+                    Problems Solved: 514
                 </p>
             </div>
         </div>
