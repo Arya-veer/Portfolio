@@ -17,11 +17,14 @@ export const WORKEXES = [
             "SQS",
             "Redis",
             "S3",
+            "Mongo DB",
+            "Postgresql",
+            
         ],
         description: [
-            "Facilitated the development of a new product, MER (Medical Examination Report) which is a platform for getting leads from insurance companies and generating medical reports for the same through online consultations.",
-            "Improved efficiency of a graph-based algorithm from O(n^2) to O(n) reducing API response time to genereate Medical Reports by 50%.",
+            "Architected and laid down the framework for DLS based product, controlling UI using database and configurations which reduced releases by 40% saving 4 hours of weekly developer time. Used low-level design patterns like factory, singleton, and strategy.",
             "Developed a custom rule engine which facilitates the insurance decision without human intervention. It also has a frontend interface for the operations team to create and manage rules.",
+            "Improved efficiency of a graph-based algorithm from O(n^2) to O(n) reducing API response time to genereate Medical Reports by 50%.",
         ],
         organisation: "Tata 1MG",
         type: "Full Time Role",
