@@ -1,16 +1,15 @@
-import Image from "next/image";
-
-import Link from "next/link";
-
+import {
+    FaExternalLinkAlt,
+    FaGithub,
+    FaLinkedinIn,
+} from "react-icons/fa";
 import {
     MdOutlineMailOutline,
     MdOutlinePhone,
 } from "react-icons/md";
-import {
-    FaLinkedinIn,
-    FaGithub,
-    FaExternalLinkAlt,
-} from "react-icons/fa";
+
+import Image from "next/image";
+import Link from "next/link";
 
 function College() {
     return (
@@ -114,37 +113,13 @@ function Leetcode() {
 
             <div className='flex flex-col justify-between md:pt-2 pt-0'>
                 <p className='md:text-[15px] text-[8px]'>
-                    Contest Rating: 1822
+                    Contest Rating: 2037
                 </p>
                 <p className='md:text-[15px] text-[8px]'>
-                    Problems Solved: 514
+                    Problems Solved: 601
                 </p>
             </div>
         </div>
-        // <div className='flex flex-col w-full justify-between'>
-        //     <Link
-        //         className='flex flex-row gap-2 text-xl h-fit items-center'
-        //         href='https://leetcode.com/u/aryaveersingh2003/'
-        //     >
-        //         <p className='text-white md:text-sm text-[10px] font-sans my-auto'>
-        //             Leetcode Profile
-        //         </p>
-        //     </Link>
-        //     <div>
-        //         <p>
-        //             <span className='font-bold text-three'>
-        //                 Contest Rating:{" "}
-        //             </span>{" "}
-        //             1822
-        //         </p>
-        //         <p>
-        //             <span className='font-bold text-three'>
-        //                 Problems Solved:{" "}
-        //             </span>{" "}
-        //             504
-        //         </p>
-        //     </div>
-        // </div>
     );
 }
 
