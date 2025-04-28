@@ -113,10 +113,10 @@ function Leetcode() {
 
             <div className='flex flex-col justify-between md:pt-2 pt-0'>
                 <p className='md:text-[15px] text-[8px]'>
-                    Contest Rating: 2037
+                    Contest Rating: 2077
                 </p>
                 <p className='md:text-[15px] text-[8px]'>
-                    Problems Solved: 601
+                    Problems Solved: 651
                 </p>
             </div>
         </div>

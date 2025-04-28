@@ -22,6 +22,7 @@ export const WORKEXES = [
             
         ],
         description: [
+            "Designed and implemented code for generating pdf-based complete medical summary report and pipe-seperated data file for leads comprising of 200+ parameters. The report generation is done using the same DLS based product which is explained below. For the result of various parameters, rule engine is used.",
             "Architected and laid down the framework for DLS based product, controlling UI using database and configurations which reduced releases by 40% saving 4 hours of weekly developer time. Used low-level design patterns like factory, singleton, and strategy.",
             "Developed a custom rule engine which facilitates the insurance decision without human intervention. It also has a frontend interface for the operations team to create and manage rules.",
             "Improved efficiency of a graph-based algorithm from O(n^2) to O(n) reducing API response time to genereate Medical Reports by 50%.",

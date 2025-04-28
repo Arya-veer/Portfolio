@@ -1,11 +1,9 @@
+import ConsistentHashing from './blogs/consistent-hashing';
+import DSA from './blogs/dsa-section';
+import FlexBisonTools from './blogs/flex-bison';
+import HTTPsUnwrapped from './blogs/https-unwrapped';
 import  Introduction  from './blogs/introduction';
 import Resume from './blogs/resume-section';
-import DSA from './blogs/dsa-section';
-import ConsistentHashing from './blogs/consistent-hashing';
-import FlexBisonTools from './blogs/flex-bison';
-
-
-
 
 export const BLOGS = [
     {
@@ -62,5 +60,17 @@ export const BLOGS = [
         "name":"flex-bison",
         "blogID":5,
         "excerpt":"Flex and Bison are compiler construction tools that are used to generate the lexical analyzers and parsers. I tried to use these tools for a very basic compiler and here I am sharing the power of these tools."
+    },
+    {
+        "title": "HTTPs unwrapped",
+        "link": "/blogs/https-unwrapped",
+        "category": "Security",
+        "date": "27/04/2025",
+        "active": false,
+        "component": HTTPsUnwrapped,
+        "name": "https-unwrapped",
+        "blogID": 6,
+        "excerpt": "HTTPS: The secure version of HTTP, which is the protocol used for transferring data over the web. Why is it secure? and at what degree? This blog will discuss in extreme detail about the HTTPS protocol, particularly the TLS handshake and the security it provides.",
+        
     }
 ]

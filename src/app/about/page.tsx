@@ -86,7 +86,7 @@ export default function About() {
                         Django, Next.js, React.js, Sanic,
                         Springboot, MySQL, PostgreSQL,
                         MongoDB, Docker, Kubernetes, Kafka,
-                        Git, SQS, Redis, S3, Nginx, SQS
+                        Git, SQS, Redis, S3, Nginx, SQS, Langchain,
                     </p>
                     <p className='text-sm'>
                         <span className='font-semibold'>
@@ -96,7 +96,7 @@ export default function About() {
                         CI/CD, Microservices, RESTful APIs,
                         GraphQL, Websockets, Server-side
                         rendering, Postman, Github,JIRA,
-                        Bitbucket
+                        Bitbucket, RAG
                     </p>
                 </div>
             </div>
