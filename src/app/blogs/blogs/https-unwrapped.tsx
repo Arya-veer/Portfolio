@@ -17,15 +17,15 @@ export default function HTTPsUnwrapped({ blog }: any) {
             </h1>
             <div className='mt-3 p-2'>
                 <p className='md:text-md text-md text-white font-serif'>
-                    HTTPs i.e. HTTP Secure. What are the issues with HTTPs that 
-                    we need HTTPs, and how it makes it secure? This will be a long
+                    HTTPS i.e. HTTP Secure. What are the issues with HTTPS that 
+                    we need HTTPS, and how it makes it secure? This will be a long
                     blog, where we will start with the issue, then see how it is fixed
                     and try to think of ways to break it again and again. 
                     
                 </p>
                 <p className='md:text-md text-md text-white font-serif mt-2'>
                     I have tried to include math and some code snippets for you to understand the 
-                    concepts better. The blog is not written in the chronological https order, but 
+                    concepts better. The blog is not written in the chronological HTTPS order, but 
                     rather in a way that you can understand the concepts better. At the end, we will 
                     understand the chronological order and summarize everything. Let&apos;s get started.
                 </p>
@@ -142,7 +142,7 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         when it comes to TLS certificates. Examples of CAs are: Digicert, GlobalSign, Lets Encrypt etc.
                         Certificate is nothing but a file commonly with extension .crt.
                         It contains some important information like: 
-                        Issuerer, Subject, Validity, Public Key, Signature Algorithm etc.
+                        Issuer, Subject, Validity, Public Key, Signature Algorithm etc.
                     </p>
                     <p className="md:text-md text-md text-white font-serif mt-2">
                         Now let us understand what signing actually means. Signing refers to conversion of 
@@ -413,11 +413,11 @@ export default function HTTPsUnwrapped({ blog }: any) {
                 <p className='md:text-lg text-lg text-white font-serif mt-4'>
                     I know this was a very long blog, very informative. I can guarantee you that you will never
                     need any other resource to understand the TLS handshake and HTTPS. Read it twice or thrice,
-                    and also go throught the resources I am attaching. You can always use your favourite LLM
+                    and also go through the resources I am attaching. You can always use your favourite LLM
                     to understand the concepts better. I have tried to explain the concepts in a very simple way.
                     I hope you liked the blog. If you have any queries, feel free to comment.
                     <br/>
-                    I will be attaching few images soon.
+                    I will be attaching a few images soon.
                 </p>
             </div>
         </div>
