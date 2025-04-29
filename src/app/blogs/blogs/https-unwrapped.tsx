@@ -90,7 +90,7 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         Simple division right? Yes, so what can we do?
                     </p>
                     <p className='md:text-md text-md text-white font-serif mt-2'>
-                        Mathematicians and Computer scietists have found a way to solve this problem. 
+                        Mathematicians and Computer scientists have found a way to solve this problem. 
                         They have made it next to impossible to get a or b from a*G or b*G.
                         This is done using a concept called ECDHE (Elliptic Curve Diffie-Hellman Ephemeral).
                         We will understand this in a great detail later. In short, just understand that this is 
@@ -126,13 +126,13 @@ export default function HTTPsUnwrapped({ blog }: any) {
                     <p className="md:text-md text-md text-white font-serif mt-2">
                         So basically we have two parts of TLS. One is the earlier part of certificates,
                         and the later is one of key exchange. As mentioned, certificates are used to verify
-                        that actually server has sent the ephemeral key. On the other hand, ephermal key(b*G)
+                        that actually server has sent the ephemeral key. On the other hand, ephemeral key(b*G)
                         is used to generate actual encryption and decryption key(a*b*G).
                     </p>
                 </div>
                 <div>
                     <h2 className='md:text-xxl text-lg text-three font-bold mt-4'>
-                        Certifiate: Why and How
+                        Certificate: Why and How
                     </h2>
                     <p className='md:text-md text-md text-white font-serif'>
                         This is the only blog you would need to understand the certificate part of TLS.
@@ -148,7 +148,7 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         Now let us understand what signing actually means. Signing refers to conversion of 
                         data applying some mathematical functions into other form. In TLS handshake, the 
                         private key on server (residing in server.key file) is used to sign the 
-                        ephermal key + some data hashed together i.e.
+                        ephemeral key + some data hashed together i.e.
                         {<MultilineCodeSnippet code="sign(hash(ServerRandom + ClientRandom + b*G))"/>}
                         The signature is then sent to the client along with plain b*G.
                         The client also hashes the same i.e.
@@ -162,7 +162,7 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         Now there should be 2 questions in your mind: 1. How does browser verifies that 
                         the public key which is received is actually from the server and not from hacker? 
                         2. If actually the public key and private key pair can encrypt and decrypt data, why
-                        we need to generate ephermal keys everytime? and then use them to generate the actual key?
+                        we need to generate ephemeral keys everytime? and then use them to generate the actual key?
                         I will answer the second question first. The public-private key pair can only encrypt a very
                         small amount of data (bytes) while the data send over internet is always few 100 kilobytes.
                         Also the time taken to encrypt and decrypt the data is very high when it comes to the 
@@ -203,15 +203,15 @@ export default function HTTPsUnwrapped({ blog }: any) {
                             <li>Now we send intermediate.crt and server.crt to client along with public key.</li>
                             <li>root.crt is <b>hardcoded</b> in the browsers, so browsers use them to verify intermediate.crt</li>
                             <li>Then the intermediate public key sent along in intermediate.crt is used to verify server.crt certificate</li>
-                            <li>Once verified, client stores the server public key for upcoming ephermal key(b*G).</li>
+                            <li>Once verified, client stores the server public key for upcoming ephemeral key(b*G).</li>
                         </ul>
                     </p>
                     <p className="md:text-md text-md text-white font-serif mt-2">
                         So now the client can be sure that the public key is actually from the server and not from hacker.
-                        And the client has the actual public key to verify the signature on the ephermal key.
+                        And the client has the actual public key to verify the signature on the ephemeral key.
                         So let us understand the second part of the TLS i.e. how a*G and b*G generated so that even after
                         knowing G, a and b are not calculated. This is the concept of Diffie-Hellman Elliptic Curves, 
-                        some intresting mathematics. Next section.
+                        some interesting mathematics. Next section.
                     </p>
                 </div>
                 <div>
@@ -219,9 +219,9 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         ECDHE
                     </h2>
                     <p className='md:text-md text-md text-white font-serif'>
-                        ECDHE stands for Elliptic Curve Diffie Hellman Ephermal. Diffie Hellman is the protocol which defines
+                        ECDHE stands for Elliptic Curve Diffie Hellman ephemeral. Diffie Hellman is the protocol which defines
                         this complex math, rules and standard values. Elliptic curves are mathematical curves over real numbers,
-                        integers or modded integers too. Ephermal means that keys are changed every session.
+                        integers or modded integers too. ephemeral means that keys are changed every session.
                         Let&apos;s understand some of my favourite subject: MATHEMATICS.
                     </p>
                     <p className='md:text-md text-md text-white font-serif mt-2'>
