@@ -254,11 +254,170 @@ export default function HTTPsUnwrapped({ blog }: any) {
                         So we get R(xr, yr).
                         This is how we do addition of P and Q.
                     </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Let us see how we can add a point to itself i.e. calculate P+P = 2P.
+                        This is similar to the earlier case, only the line defined is tangent
+                        to the curve at point P. R will be the point of intersection where 
+                        the tangent again intersects the curve.
+                        So we can calculate the slope of the tangent at point P(xp,yp) as:
+                        {<MultilineCodeSnippet code="
+                            Slope of tangent(Differentiate and find): m = (3xp^2 + a)/(2yp);
+                            Equation of line = y-yp = m(x-xp) => y = m(x-xp) + yp;
+                            Putting this in equation of curve: (m(x-xp) + yp)^2 = x^3 + ax + b;
+                            Rearranging the terms: x^3 - (m^2)x^2 + (a-2myp + 2m^2xp)x + (b-m^2xp^2+2mypxp-yp^2) = 0;
+                            Now we know that sum of roots will be -(coefficient of x^2/coefficient of x^3): xp+xq+xr = m^2;
+                            => xr = m^2 - (2xp);
+                            => substituting in initial equation, yr = m(xp-xr) - xp;
+                        "/>}
+                        So we get R(xr, yr).
+                        And we have learnt doubling of point too.
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        But why is all this important? Coming to it in a while, just keep learning the concepts.
+                        Once we have a point on curve, we can keep doing scalar multiplications. Also, we can memoize 
+                        some of the multiplications for faster calculations. Let me explain this with an example.
+                        Assume we want to calculate 13P.
+                        {<MultilineCodeSnippet code="13P = 8P + 4P + P" />}
+                        Once we have P, we can calculate 2P, 4P and 8P using the earlier method (doubling);
+                        So we can calculate 13P in 3 multiplications instead of 13. Bingo!
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Another property of elliptic curves: THEY ARE CYCLIC GROUPS.
+                        This means that if we keep adding a point to itself, we will get back the same point after some time.
+                        i.e. There exists a scalar n such that nP = O (point at infinity).
+                        This is known as order of the point.
+                        So we can keep adding a point to itself and get back the same point after some time.
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Now one last concept is that of modded values.
+                        We can define the elliptic curve over modded primes too.
+                        i.e. {<MultilineCodeSnippet code="y^2 = x^3 + ax + b mod p" />}
+                        This means that we can define the elliptic curve over a finite field and 
+                        we can do all the operations over this finite field.
+                        This is very important as we can do all the operations over a finite field 
+                        because mod operations do not get lost in precision issues.
+                    </p>
+                </div>
+                <div>
+                    <h2 className='md:text-xxl text-lg text-three font-bold mt-4'>
+                        ECDHE in TLS (Action)
+                    </h2>
+                    <p className='md:text-md text-md text-white font-serif'>
+                        You now have an amazing understanding of ECDHE. Also you have gotten a crude idea of TLS.
+                        Let us combine these and see magic happens. Remember what we want to achieve?
+                        We have G (known to everyone in the world), we can generate a and b (private keys) only 
+                        known to client and server respectively. Then we calculate a*G and b*G.
+                        Now we send a*G to server and b*G to client. (So the hacker can intercept this).
+                        Now the client calculates a*G*b and server calculates b*G*a (both are same).
+                        Now we have a common key which is used to encrypt the data.
+                        We want to make sure that the hacker does not get a or b even if they have a*G, b*G and G.
+                        Elliptic curves do not define any kind of division. The only possible operations are addition
+                        and which leads to scalar multiplication.
+                        So we can not divide a*G or b*G to get a or b.
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Now everything comes in place, we have solved the problem. Yeaaa!!
+                        Let us just take in some information based upon the discussion.
+                        How is G known? What are the possible values of a and b? 
+                        Let&apos;s answer all of these one by one.
+                        
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Mathematicians and Computer scientists have defined some standard elliptic curves (modded primes).,
+                        some of them are: secp256k1, secp256r1, secp384r1, secp521r1. TLS uses secp256r1.
+                        The generator point, G is fixed for each curve so that the value of G is known to everyone and 
+                        that value is extensively analyzed and tested against any cryptoanalysis.
+                        Important thing is that the order of the point G (n) is very large. because a and b 
+                        are in range [0, n-1]. So the hacker can not brute force the values of a and b.
+                        Also the prime p needs to be very large so that the hacker can not brute force the value of 
+                        a*b*G. For the secp256r1 curve:
+                        {
+                            <MultilineCodeSnippet code="
+                                prime to mod is: p = 2^256 - 2^224 + 2^192 + 2^96 - 1;
+                                order of G: n = 2^256 - 2^32 - 2^8 - 2^7 - 2^6 - 2^4 - 1;
+                                The actual point on curve: G(x,y) = (0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798,
+                                0x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199B3AD7E41D8C9C47);
+                                The curve is: y^2 = x^3 + 0xffffffff00000001000000000000000000000000fffffffffffffffffffffffc*(x)
+                                 + 0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b;
+                                 ;
+                                All these values are modded with p.
+                            " 
+                            />
+                        }
+                        Because of such large magnitude of data (256 bits), the hacker can not brute force the values of a and b.
+                        Just for reference, the number of possible values of a and b is 2^256 which is more than the number of 
+                        atoms in universe and it will take more than 10^100 years to brute force the values of a and b using even 
+                        the fastest supercomputers in the world.
+                        So we can be sure that the hacker can not brute force the values of a and b.
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Once we have a*b*G (only known to client and server) which is actually a point on the curve,
+                        we generally use the x coordinate of the point and pass it through a Key Derivation Function (KDF)
+                        along with some random data (ClientRandom and ServerRandom) to generate the actual key.
+                        The KDF is a function which takes in some data and generates a key of fixed length. (AES256 key for eg)
+                    </p>
+                </div>
+                <div>
+                    <h2 className='md:text-xxl text-lg text-three font-bold mt-4'>
+                        Adding all pieces together
+                    </h2>
+                    <p className='md:text-md text-md text-white font-serif'>
+                        We initially came up with two problems at lowest level:
+                        1. How to generate a*G so that a is not known to hacker?
+                        2. How to actually verify that the server is actually sending the data and not hacker?
+                        We solved the first problem using ECDHE and second problem using certificates.
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        Some simple concepts I will explain later. 
+                        Now let&apos;s see how the TLS handshake looks like:
+                        <ol className="flex flex-col text-three list-decimal ml-4 list-inside gap-1 mt-2">
+                            <li>TCP connection is established</li>
+                            <li>
+                                Client sends a <b>ClientHello</b> message to server with some random data
+                                (ClientRandom) and supported cipher suites. 
+                            </li>    
+                            <li>
+                                Server sends a <b>ServerHello</b> message to client with some random data
+                                (ServerRandom), selects a cipher and responds back with the selected cipher suite.
+                                Server also sends the server.crt(contains public key) and intermediate.crt to client.
+                            </li>
+                            <li>
+                                Client verifies the server.crt and intermediate.crt using the root.crt
+                                (hardcoded in browser). If verified, client stores the public key of server.
+                            </li>
+                            <li>
+                                Client generates a and calculates a*G.
+                                Client sends a*G to server.
+                            </li>
+                            <li>
+                                Server generates b and calculates b*G.
+                                Server sends b*G to client.
+                            </li>
+                            <li>
+                                Client calculates a*G*b and server calculates b*G*a.
+                                Now both have the same key.
+                            </li>
+                            <li>
+                                Client and server now send the encrypted data using the common key.
+                            </li>
+                        </ol>
+                        Attaching the diagram for the same:               
+                    </p>
+                    <p className="md:text-md text-md text-white font-serif mt-2">
+                        We now have a secure connection between client and server. 
+                        Data is encrypted and sent. Although some are speculating that 
+                        with advancement in quantum computing, the ECDHE will be broken.
+                        But that is the game of cat and mouse, and we will have to wait and see.
+                    </p>
                 </div>
                 <p className='md:text-lg text-lg text-white font-serif mt-4'>
-                    If you have any queries or suggestions,
-                    do let me know in the comments below. I
-                    will be happy to help you.
+                    I know this was a very long blog, very informative. I can guarantee you that you will never
+                    need any other resource to understand the TLS handshake and HTTPS. Read it twice or thrice,
+                    and also go throught the resources I am attaching. You can always use your favourite LLM
+                    to understand the concepts better. I have tried to explain the concepts in a very simple way.
+                    I hope you liked the blog. If you have any queries, feel free to comment.
+                    <br/>
+                    I will be attaching few images soon.
                 </p>
             </div>
         </div>

@@ -66,7 +66,7 @@ export const BLOGS = [
         "link": "/blogs/https-unwrapped",
         "category": "Security",
         "date": "27/04/2025",
-        "active": false,
+        "active": true,
         "component": HTTPsUnwrapped,
         "name": "https-unwrapped",
         "blogID": 6,

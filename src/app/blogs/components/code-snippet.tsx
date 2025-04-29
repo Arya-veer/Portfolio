@@ -11,7 +11,7 @@ export default function MultilineCodeSnippet({ code }: { code: string }) {
                 {
                     code.split(";").map((line,idx)=>{
                         return (
-                            <p>{line}</p>
+                            <p key={idx}>{line}</p>
                         );
                     })
                 }
