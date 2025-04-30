@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run format && next dev",
+    "format": "prettier --write \"src/**/*.tsx\"",
+    "build": "npm run format && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,6 +25,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "postcss": "^8",
+    "prettier": "^3.5.3",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
