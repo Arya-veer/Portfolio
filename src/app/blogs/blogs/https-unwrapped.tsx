@@ -18,9 +18,9 @@ export default function HTTPsUnwrapped({ blog }: any) {
       <div className="mt-3 p-2">
         <p className="md:text-md text-md text-white font-serif">
           HTTPS i.e. HTTP Secure. What are the issues with HTTP that we need
-          HTTPS, and how it makes the web secure? This will be a long blog, where we
-          will start with the issue, then see how it is fixed and try to think
-          of ways to break it again and again.
+          HTTPS, and how it makes the web secure? This will be a long blog,
+          where we will start with the issue, then see how it is fixed and try
+          to think of ways to break it again and again.
         </p>
         <p className="md:text-md text-md text-white font-serif mt-2">
           I have tried to include math and some code snippets for you to
