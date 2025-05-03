@@ -23,7 +23,7 @@ function PersonalDetails() {
   return (
     <div className="flex flex-col w-full">
       <p className="text-center font-sans w-full font-bold md:text-lg text-md">
-        Arya veer singh chauhan
+        Arya Veer Singh Chauhan
       </p>
       <div className="flex flex-col md:gap-2 md:pt-6 pt-2 md:pb-2 pb-0 break-all gap-0">
         <Link

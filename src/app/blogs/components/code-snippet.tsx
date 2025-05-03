@@ -1,7 +1,6 @@
 "use client";
 
 import { FaCopy } from "react-icons/fa";
-import { useState } from "react";
 
 export default function MultilineCodeSnippet({ code }: { code: string }) {
   "use client";
