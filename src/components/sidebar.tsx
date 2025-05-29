@@ -73,11 +73,11 @@ function CurrentWork() {
   return (
     <div className="border-t-2 border-three mt-4 flex flex-col md:gap-0 w-full gap-1 md:pb-0 pb-1 pt-1">
       <p className="font-semibold md:text-[20px] text-[10px] mx-auto">
-        Tata 1mg
+        Upcoming at D.E. Shaw Group
       </p>
       <div className="flex flex-row justify-between md:pt-2 pt-0">
-        <p className="md:text-[15px] text-[8px]">SDE 1</p>
-        <p className="md:text-[15px] text-[8px]">July 2024 - Present</p>
+        <p className="md:text-[15px] text-[8px]">MTS</p>
+        <p className="md:text-[15px] text-[8px]">June 2025 - Present</p>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 export const WORKEXES = [
   {
-    title: "Software Developer Engineer I",
+    title: "Software Development Engineer I",
     startDate: "July 2024",
-    endDate: "Present",
+    endDate: "May 2025",
     techStack: [
       "Python",
       "Sanic",

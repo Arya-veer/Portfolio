@@ -18,9 +18,10 @@ export default function About() {
           <p className="text-sm">
             I am a Software Engineer who loves to design and develop scalable
             and efficient software solutions. I am currently exploring the
-            interesting domain of distributed systems. My learning methodology
-            is learning by doing. I am a quick learner and always eager to learn
-            new things. I am a self-motivated individual who is always looking
+            interesting domain of distributed systems and a keen enthusiast of cyber security
+            . My learning methodology is learning by doing. 
+            I am a quick learner and always eager to learn new things. 
+            I am a self-motivated individual who is always looking
             for new challenges and opportunities to grow. I am a strong believer
             in the power of technology to solve real-world problems and make the
             world a better place.
