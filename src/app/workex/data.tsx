@@ -1,5 +1,24 @@
 export const WORKEXES = [
   {
+    title: "Member, Tech",
+    startDate: "June 2025",
+    endDate: "Present",
+    techStack: [
+      "Python",
+      "React.js",
+      "Git",
+      "Redis",
+      "Mongo DB",
+      "Postgresql",
+    ],
+    description: [
+      "Developed live dashboard for displaying real-time post trade data, enabling traders to monitor and analyze trades efficiently.",
+    ],
+    organisation: "D.E. Shaw India Private Limited",
+    type: "Full Time Role",
+    links: [],
+  },
+  {
     title: "Software Development Engineer I",
     startDate: "July 2024",
     endDate: "May 2025",

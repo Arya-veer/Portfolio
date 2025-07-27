@@ -73,10 +73,10 @@ function CurrentWork() {
   return (
     <div className="border-t-2 border-three mt-4 flex flex-col md:gap-0 w-full gap-1 md:pb-0 pb-1 pt-1">
       <p className="font-semibold md:text-[20px] text-[10px] mx-auto">
-        Upcoming at D.E. Shaw Group
+        D.E. Shaw Group
       </p>
       <div className="flex flex-row justify-between md:pt-2 pt-0">
-        <p className="md:text-[15px] text-[8px]">MTS</p>
+        <p className="md:text-[15px] text-[8px]">Member, Tech </p>
         <p className="md:text-[15px] text-[8px]">June 2025 - Present</p>
       </div>
     </div>
@@ -97,7 +97,7 @@ function Leetcode() {
       </div>
 
       <div className="flex flex-col justify-between md:pt-2 pt-0">
-        <p className="md:text-[15px] text-[8px]">Contest Rating: 2077</p>
+        <p className="md:text-[15px] text-[8px]">Contest Rating: 2004</p>
         <p className="md:text-[15px] text-[8px]">Problems Solved: 651</p>
       </div>
     </div>
