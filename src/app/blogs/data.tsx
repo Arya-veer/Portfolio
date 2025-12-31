@@ -4,6 +4,7 @@ import FlexBisonTools from "./blogs/flex-bison";
 import HTTPsUnwrapped from "./blogs/https-unwrapped";
 import Introduction from "./blogs/introduction";
 import Resume from "./blogs/resume-section";
+import GPUExplained from "./blogs/gpu-unwrapped";
 
 export const BLOGS = [
   {
@@ -77,5 +78,17 @@ export const BLOGS = [
     blogID: 6,
     excerpt:
       "HTTPS: The secure version of HTTP, which is the protocol used for transferring data over the web. Why is it secure? and at what degree? This blog will discuss in extreme detail about the HTTPS protocol, particularly the TLS handshake and the security it provides.",
+  },
+  {
+    title: "GPUs explained",
+    link: "/blogs/gpu-unwrapped",
+    category: "Computer Architecture",
+    date: "26/12/2025",
+    active: true,
+    component: GPUExplained,
+    name: "gpu-unwrapped",
+    blogID: 6,
+    excerpt:
+      "GPUs are the backbone of modern AI systems and LLMs. This blog explains how GPUs work, why they are so effective for AI, and how their architecture differs from CPUs.",
   },
 ];

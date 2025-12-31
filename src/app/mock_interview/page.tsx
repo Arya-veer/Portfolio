@@ -23,11 +23,15 @@ export default function MockInterviewForm() {
 
   return (
     <div className="p-10 flex flex-col gap-3">
-      <p>We are a group of industry professionals from top companies who are keen to help students prepare for their careers through mock interviews. As the 
-        placement and internship season is approaching, we are offering free mock interviews to help students prepare better.
+      <p>
+        We are a group of industry professionals from top companies who are keen
+        to help students prepare for their careers through mock interviews. As
+        the placement and internship season is approaching, we are offering free
+        mock interviews to help students prepare better.
       </p>
       <p>
-        If you are a college student and want to take a free mock interview then fill the form below. I will contact you over email for the interview.
+        If you are a college student and want to take a free mock interview then
+        fill the form below. I will contact you over email for the interview.
       </p>
       <form
         className="mx-auto w-3/4 border border-three flex flex-col gap-2 p-2"

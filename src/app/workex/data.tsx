@@ -3,14 +3,7 @@ export const WORKEXES = [
     title: "Member, Tech",
     startDate: "June 2025",
     endDate: "Present",
-    techStack: [
-      "Python",
-      "React.js",
-      "Git",
-      "Redis",
-      "Mongo DB",
-      "Postgresql",
-    ],
+    techStack: ["Python", "React.js", "Git", "Redis", "Mongo DB", "Postgresql"],
     description: [
       "Developed live dashboard for displaying real-time post trade data, enabling traders to monitor and analyze trades efficiently.",
     ],

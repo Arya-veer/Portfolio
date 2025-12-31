@@ -40,7 +40,7 @@ function NavLink({ name, link }: NavLinkProps) {
   return (
     <Link
       href={link}
-      className={`my-auto text-sm md:text-lg py-[1px] px-[6px] rounded-full  ${path === link ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000]  font-bold" : "text-three"} hover:cursor-pointer`}
+      className={`my-auto text-sm md:text-lg py-[1px] px-[6px] rounded-full  ${path.split("/")[1] === link.split("/")[1] ? "from-[#FF6445] bg-gradient-to-r to-[#ffb820] text-[#000000]  font-bold" : "text-three"} hover:cursor-pointer`}
     >
       {name}
     </Link>
