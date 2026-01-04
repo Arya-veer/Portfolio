@@ -1,32 +1,35 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "npm run format && next dev",
-    "format": "prettier --write \"src/**/*.tsx\"",
-    "build": "npm run format && next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "firebase": "^10.12.3",
-    "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.2.1",
-    "request-ip": "^3.3.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3",
-    "postcss": "^8",
-    "prettier": "^3.5.3",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
-  }
+    "name": "portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "npm run format && next dev",
+        "format": "prettier --write \"src/**/*.tsx\"",
+        "build": "npm run format && next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "firebase": "^10.12.3",
+        "next": "14.0.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-icons": "^5.2.1",
+        "request-ip": "^3.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "autoprefixer": "^10.0.1",
+        "eslint": "^8",
+        "eslint-config-next": "14.0.3",
+        "postcss": "^8",
+        "prettier": "^3.5.3",
+        "tailwindcss": "^3.3.0",
+        "typescript": "^5"
+    },
+    "engines": {
+        "node": "24.x"
+    }
 }
